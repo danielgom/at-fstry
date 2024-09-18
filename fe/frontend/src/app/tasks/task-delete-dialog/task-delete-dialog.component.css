@@ -1,0 +1,9 @@
+.mat-dialog-content {
+  margin-bottom: 16px; /* Add some space between message and buttons */
+}
+.mat-dialog-actions {
+  justify-content: flex-end; /* Align buttons to the right */
+}
+.mat-dialog-actions button:first-child {
+  margin-right: 8px; /* Add space between No and Yes buttons */
+}

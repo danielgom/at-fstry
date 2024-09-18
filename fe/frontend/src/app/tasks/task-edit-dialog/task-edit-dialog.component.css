@@ -1,0 +1,21 @@
+/* task-edit-dialog.component.css */
+
+/* Ensure consistent border-radius */
+.cdk-overlay-pane,
+.mat-dialog-container {
+  border-radius: 8px; /* Adjust as needed */
+}
+
+/* Control content overflow */
+.mat-dialog-content {
+  overflow-y: auto; /* Add vertical scroll if content overflows */
+}
+
+/* Adjust padding and margins as needed */
+.task-edit-form {
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}

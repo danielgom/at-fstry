@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: aitooling
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration
+  data:
+    mongodb:
+      uri: mongodb://${MONGO_DB_USERNAME}:${MONGO_DB_PASSWORD}@${MONGO_DB_HOST}:${MONGO_DB_PORT}/${MONGO_DB_NAME}
+      auto-index-creation: true
+JWT:
+  secret: "secret"
+  expire-duration-hours: 1
+
+RefreshToken:
+  expire-duration-days: 7

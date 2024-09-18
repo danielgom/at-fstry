@@ -1,0 +1,6 @@
+<div class="preferences-container" *ngIf="isUserLoggedIn">
+  <label>
+    <input type="checkbox" [(ngModel)]="notificationsEnabled" (click)="toggleNotifications()" />
+    Enable Notifications
+  </label>
+</div>

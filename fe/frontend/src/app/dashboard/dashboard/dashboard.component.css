@@ -1,0 +1,14 @@
+.container {
+  padding: 20px;
+}
+
+.task-summary {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.summary-card {
+  width: 200px;
+  text-align: center;
+}

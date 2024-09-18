@@ -1,0 +1,29 @@
+<div class="task-edit-form">
+  <h2>Edit Task</h2>
+  <form (ngSubmit)="onUpdateTask()">
+    <div class="form-group">
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title" [(ngModel)]="data.task.title">
+    </div>
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" [(ngModel)]="data.task.description"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="due_date">Due Date:</label>
+      <input type="datetime-local" id="due_date" name="due_date" [(ngModel)]="data.task.due_date">
+    </div>
+    <div class="form-group">
+      <label for="status">Status:</label>
+      <select id="status" name="status" [(ngModel)]="data.task.status">
+        <option value="IN_PROGRESS">In Progress</option>
+        <option value="COMPLETED">Completed</option>
+        <option value="PENDING">Pending</option>
+      </select>
+    </div>
+    <div class="form-actions">
+      <button type="submit">Update Task</button>
+      <button type="button" (click)="onCancel()">Cancel</button>
+    </div>
+  </form>
+</div>

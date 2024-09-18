@@ -1,0 +1,23 @@
+.notification-container {
+  position: fixed;
+  bottom: 20px; /* Adjust to place it near the bottom of the page */
+  right: 20px; /* Adjust to place it on the right side */
+  width: 300px;
+  max-height: 400px;
+  overflow-y: auto; /* Adds scroll if notifications overflow */
+  background-color: #333; /* Match the dark theme */
+  color: white; /* Ensure text is visible on dark background */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  border-radius: 8px;
+  z-index: 1000; /* Ensure it appears on top */
+  font-size: 0.9rem; /* Slightly smaller font size for notifications */
+}
+
+.notification {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #555; /* Subtle border color */
+  border-radius: 5px;
+  background-color: #444; /* Match the dark theme */
+}

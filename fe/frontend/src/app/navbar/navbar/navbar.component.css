@@ -1,0 +1,20 @@
+/* src/app/navbar/navbar.component.css */
+nav {
+  padding: 0.5em 1em;
+}
+
+.navbar-brand {
+  font-weight: initial;
+  font-size: 1.25em;
+}
+
+.nav-link {
+  margin-right: 1em;
+  cursor: pointer;
+}
+
+.navbar-nav.me-auto {
+  margin-right: auto !important; /* Push other items to the left */
+}
+
+

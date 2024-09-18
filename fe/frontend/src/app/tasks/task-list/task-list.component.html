@@ -1,0 +1,75 @@
+<div class="task-list-container">
+  <div class="header-container">
+    <h1 class="task-list-header">My Task List</h1>
+    <button (click)="createTask()" class="create-task-button">
+      <i class="fas fa-plus"></i> <span>Create Task</span>
+    </button>
+  </div>
+
+  <div class="filter-container">
+    <label for="statusFilter">Filter by Status:</label>
+    <select id="statusFilter" (change)="onStatusFilterChange($event)">
+      <option value="">All Statuses</option>
+      <option value="IN_PROGRESS">In Progress</option>
+      <option value="COMPLETED">Completed</option>
+      <option value="PENDING">Pending</option>
+      <option value="NONE">None</option>
+    </select>
+  </div>
+
+  <div class="sort-container">
+    <button (click)="toggleSortOrder()">Sort by Due Date: {{ sortOrder === 'ASC' ? 'Ascending' : 'Descending' }}</button>
+  </div>
+
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+
+  <ul *ngIf="!loading && filteredTasks.length > 0" class="task-list">
+    <li *ngFor="let task of filteredTasks" class="task-item">
+      <div class="task-wrapper">
+        <div class="task-content">
+          <h3 class="task-title">{{ task.title }}</h3>
+          <p class="task-description">{{ task.description }}</p>
+          <div class="task-meta">
+            <span class="task-due-date">Due: {{ task.due_date }}</span>
+            <span class="task-status" [ngClass]="{
+              'status-in-progress': task.status === 'IN_PROGRESS',
+              'status-completed': task.status === 'COMPLETED',
+              'status-pending': task.status === 'PENDING',
+              'status-none': task.status === 'NONE'
+            }">{{ task.status }}</span>
+          </div>
+        </div>
+        <div class="task-actions">
+          <fa-icon [icon]="faPen" class="edit-icon" (click)="onStartEditing(task)"></fa-icon>
+          <fa-icon [icon]="faTrash" class="delete-icon" (click)="deleteTask(task)"></fa-icon>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <p *ngIf="!loading && filteredTasks.length === 0" class="no-tasks-message">
+    No tasks found.
+  </p>
+
+  <div class="pagination-controls">
+    <mat-paginator
+      class="smaller-paginator"
+      [length]="totalElements"
+      [pageSize]="taskFilter.pageSize"
+      [pageIndex]="taskFilter.pageNumber - 1"
+      (page)="onPageChange($event)"
+      showFirstLastButtons>
+    </mat-paginator>
+
+    <mat-form-field appearance="outline" class="page-size-select">
+      <mat-label>Page Size</mat-label>
+      <mat-select [(value)]="taskFilter.pageSize" (selectionChange)="onPageChange({pageIndex: 0})">
+        <mat-option *ngFor="let size of pageSizeOptions" [value]="size">
+          {{ size }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</div>

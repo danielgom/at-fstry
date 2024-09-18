@@ -1,0 +1,31 @@
+<div class="d-flex justify-content-center align-items-center vh-100">
+  <div class="card p-4 shadow-sm" style="width: 350px;">
+    <h2 class="text-center mb-4">Signup</h2>
+    <form (ngSubmit)="onSubmit()" [formGroup]="signupForm">
+      <div *ngIf="successMessage" class="alert alert-success mt-3">
+        {{ successMessage }}
+      </div> <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" id="name" formControlName="name" class="form-control" placeholder="Enter your name" />
+    </div>
+      <div class="mb-3">
+        <label for="lastName" class="form-label">Last Name</label>
+        <input type="text" id="lastName" formControlName="lastName" class="form-control" placeholder="Enter your last name" />
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" id="email" formControlName="email" class="form-control" placeholder="Enter your email" />
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" id="password" formControlName="password" class="form-control" placeholder="Enter your password" />
+      </div>
+      <button type="submit" class="btn btn-primary w-100" [disabled]="!signupForm.valid">
+        Signup
+      </button>
+    </form>
+    <div *ngIf="errorMessage" class="alert alert-danger mt-3">
+      {{ errorMessage }}
+    </div>
+  </div>
+</div>

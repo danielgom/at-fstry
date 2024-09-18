@@ -1,0 +1,17 @@
+/* Apply styles for mat-select */
+.mat-form-field-appearance-outline .mat-form-field-flex {
+  background-color: #212121; /* Dark background for the selector */
+}
+
+.mat-select-value-text {
+  color: #eee; /* Light text color for better visibility */
+}
+
+/* Style the mat-select dropdown panel */
+.mat-select-panel {
+  background-color: #fff !important; /* Light background for the dropdown options */
+}
+
+.mat-option {
+  color: #212121; /* Dark text color for dropdown options */
+}

@@ -1,0 +1,16 @@
+/* src/app/auth/login/login.component.css */
+.card {
+  border-radius: 10px;
+  padding: 90px;
+  margin: 0 auto;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #004085;
+}

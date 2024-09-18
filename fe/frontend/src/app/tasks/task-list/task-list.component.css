@@ -1,0 +1,181 @@
+/* task-list.component.css */
+.task-list-container {
+  width: 80%;
+  margin: 20px auto;
+  font-family: sans-serif;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.task-list-header {
+  font-size: 2em;
+  margin-bottom: 0;
+}
+
+.create-task-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.create-task-button:hover {
+  background-color: #388E3C;
+}
+
+.filter-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.filter-container label {
+  margin-right: 10px;
+}
+
+.sort-container {
+  margin-bottom: 20px;
+}
+
+.sort-container button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  color: #eee; /* Light text color */
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-item {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.task-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-content {
+  flex-grow: 1;
+}
+
+.task-title {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.task-description {
+  margin: 0;
+}
+
+.task-meta {
+  font-size: 0.9em;
+  color: #777;
+}
+
+.task-due-date {
+  margin-right: 10px;
+}
+
+.task-status {
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.status-in-progress {
+  background-color: #FFEB3B;
+  color: #212121;
+}
+
+.status-completed {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.status-pending {
+  background-color: #FF9800;
+  color: white;
+}
+
+.status-none {
+  background-color: #9E9E9E;
+  color: white;
+}
+
+.task-actions {
+  display: flex;
+  align-items: center;
+}
+
+.edit-icon {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.no-tasks-message {
+  text-align: center;
+  font-style: italic;
+  color: #777;
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.smaller-paginator {
+  height: 40px; /* Adjust the height as needed */
+}
+.smaller-paginator .mat-paginator-container {
+  height: 100%; /* Make the container fill the custom height */
+}
+
+.page-size-select {
+  width: 120px;
+}
+
+.page-size-select .mat-select-value { /* Target the selected value */
+  color: #eee; /* Light text color */
+}
+
+/* In task-list.component.scss (if you have view encapsulation enabled) */
+:host ::ng-deep .mat-form-field-appearance-outline .mat-form-field-flex {
+  background-color: #212121; /* Dark background for the selector */
+}
+
+:host ::ng-deep .mat-select-value-text {
+  color: #170e0e; /* Light text color for better visibility */
+}
+
+:host ::ng-deep .mat-select-panel {
+  background-color: #100d0d !important; /* Light background for the dropdown options */
+}
+
+:host ::ng-deep .mat-option {
+  color: #212121; /* Dark text color for dropdown options */
+}
+
+.delete-icon {
+  cursor: pointer; /* Changes cursor to a pointer (hand icon) */
+  margin-right: 10px; /* Optional: Add space between icons */
+}

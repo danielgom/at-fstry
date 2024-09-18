@@ -1,0 +1,67 @@
+.dialog-container {
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  margin-bottom: 15px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+div {
+  padding: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea,
+input[type="date"],
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+/* Improved Button Styles */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background-color: #388E3C;
+}
+
+button[type="button"] {
+  background-color: #f44336;
+  color: white;
+}
+
+button[type="button"]:hover {
+  background-color: #D32F2F;
+}
+
+/* Container for buttons to control alignment and spacing */
+.button-container {
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+  gap: 10px; /* Space between buttons */
+}

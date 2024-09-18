@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/">Task Manager</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- Dashboard Tab (show when logged in) -->
+        <li class="nav-item" *ngIf="isLoggedIn()">
+          <a class="nav-link" routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+        </li>
+        <!-- Only show these links when logged in -->
+        <li class="nav-item" *ngIf="isLoggedIn()">
+          <a class="nav-link" routerLink="/tasks" routerLinkActive="active">Tasks</a>
+        </li>
+        <!-- Show login/signup if not logged in -->
+        <li class="nav-item" *ngIf="!isLoggedIn()">
+          <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
+        </li>
+        <li class="nav-item" *ngIf="!isLoggedIn()">
+          <a class="nav-link" routerLink="/signup" routerLinkActive="active">Signup</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item" *ngIf="isLoggedIn()">
+          <a class="nav-link" (click)="onLogout()">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

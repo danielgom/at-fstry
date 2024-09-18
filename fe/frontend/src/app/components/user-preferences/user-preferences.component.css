@@ -1,0 +1,22 @@
+.preferences-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center horizontally */
+  padding: 5px 15px; /* Smaller padding for compact size */
+  background-color: #333; /* Match dark theme background */
+  color: white; /* Ensure text is visible */
+  border: 1px solid #555; /* Subtle border around the preference box */
+  border-radius: 8px;
+  margin: 10px auto; /* Center it horizontally with margin */
+  max-width: 250px; /* Restrict the maximum width */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for better visibility */
+}
+
+.preferences-container label {
+  cursor: pointer;
+  font-size: 0.9rem; /* Smaller font size */
+}
+
+input[type="checkbox"] {
+  margin-right: 5px; /* Smaller margin between checkbox and label */
+}
